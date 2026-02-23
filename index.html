@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidayat Nur Rosyid - Portfolio</title>
+
+    <!-- Google Fonts: Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;600;700&family=Playfair+Display:ital@1&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons and Animations -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Hero Section: Lara Acosta Redesign -->
+    <div class="hero-container" id="home">
+        <!-- Background Image overlaying container to act as full-screen cover -->
+        <!-- Pastikan file foto kamu bernama profile.jpg dan ada di folder ini -->
+        <div class="hero-bg-image" style="background-image: url('profile.jpg');"></div>
+
+        <!-- Gradient overlay to darken the bottom and left so text is readable -->
+        <div class="hero-gradient-overlay"></div>
+
+        <!-- Header / Navigation Bar -->
+        <header class="top-nav" data-aos="fade-down" data-aos-duration="1000">
+            <!-- Left Logo / Name -->
+            <div class="logo">
+                <img src="https://i.imgur.com/LkLamdF.png" alt="Hidayat Rosyid Logo">
+            </div>
+
+            <!-- Center Navigation Pill -->
+            <nav class="nav-links">
+                <a href="#home" class="active">Home</a>
+                <a href="#profile">Profile</a>
+                <a href="#portfolio">Project</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <!-- Right Actions -->
+            <div class="nav-actions">
+                <a href="https://linkedin.com" target="_blank" class="icon-btn"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://instagram.com/hidayatnurrosyid" target="_blank" class="icon-btn"><i
+                        class='bx bxl-instagram'></i></a>
+                <!-- Hamburger button (mobile only) -->
+                <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content Overlay (Lower-third aligned) -->
+        <div class="hero-content-wrapper">
+
+            <!-- Tagline / Label (Removed old roles here) -->
+            <div class="hero-tagline" data-aos="fade-up" data-aos-delay="200">
+                <p>Hi, I'm Hidayat Nur Rosyid</p>
+            </div>
+
+            <!-- Giant Headline -->
+            <h1 class="hero-title-giant" data-aos="fade-up" data-aos-delay="400">
+                Design. Develop. Create.
+            </h1>
+
+            <!-- Hero Actions (Moved below title) -->
+            <div class="hero-action-bottom" data-aos="fade-up" data-aos-delay="500">
+                <a href="#contact" class="btn-primary-pill">
+                    Let's Talk
+                </a>
+                <a href="https://drive.google.com/file/d/15f55EAjTMH1qtZzgs1xawPQGexIvF4Ia/view?usp=sharing"
+                    target="_blank" class="btn-secondary-pill">
+                    <span>My Resume</span>
+                    <div class="btn-icon-circle">
+                        <i class='bx bx-up-arrow-alt' style="transform: rotate(45deg);"></i>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Bottom Statistics Bar (Replaced with Roles) -->
+            <div class="hero-stats" data-aos="fade-up" data-aos-delay="500">
+                <div class="stat-item">
+                    <span class="stat-num"><span class="circle-num">01</span> Graphic Designer</span>
+                    <span class="stat-label">Visual branding, UI design, and creative assets</span>
+                </div>
+
+                <div class="stat-item">
+                    <span class="stat-num"><span class="circle-num">02</span> Frontend Developer</span>
+                    <span class="stat-label">Building responsive, interactive web experiences</span>
+                </div>
+
+                <div class="stat-item">
+                    <span class="stat-num"><span class="circle-num">03</span> Content Creator</span>
+                    <span class="stat-label">Engaging digital content and storytelling</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- PROFILE SECTION -->
+    <section id="profile" class="profile-section">
+        <div class="profile-container">
+            <!-- Left: ID Card Physics -->
+            <div class="profile-left" data-aos="fade-right">
+                <div class="id-card-hook">
+                    <!-- SVG rope: butt=flat top, circle=round bottom at card -->
+                    <svg class="rope-canvas" xmlns="http://www.w3.org/2000/svg">
+                        <path class="rope-path" fill="none" stroke="#1d4ed8" stroke-width="50" stroke-linecap="butt" />
+                        <!-- Round cap at bottom where rope meets card -->
+                        <circle class="rope-end-cap" r="25" fill="#1d4ed8" />
+                    </svg>
+
+                    <!-- ID Card - positioned absolutely, draggable -->
+                    <div class="id-card">
+                        <img src="https://i.imgur.com/cocbeRG.jpeg" alt="Hidayat Nur Rosyid" class="id-photo">
+                        <img src="https://i.imgur.com/CeSHh11.png" alt="Hidayat Nur Rosyid" class="id-ribbon-img">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Content Grid -->
+            <div class="profile-right" data-aos="fade-left">
+                <div class="profile-header-box">
+                    <h2>PROFILE</h2>
+                </div>
+
+                <div class="profile-grid">
+                    <!-- Column 1 -->
+                    <div class="p-col-left">
+                        <!-- About Me -->
+                        <div class="p-block" data-aos="fade-up">
+                            <h3 class="p-title">ABOUT ME</h3>
+                            <p class="p-desc">Hello! I'm Hidayat, a creative student currently studying at Universitas
+                                Amikom Yogyakarta. My expertise lies in graphic design and video editing, with a strong
+                                focus on visual storytelling. As a Yogyakarta native, I bring a unique perspective to
+                                every project. I'm constantly looking for opportunities to grow, collaborate, and bring
+                                impactful ideas to life. Let's connect and build something amazing!</p>
+                        </div>
+
+                        <!-- Experience -->
+                        <div class="p-block" data-aos="fade-up" data-aos-delay="100">
+                            <h3 class="p-title">EXPERIENCE</h3>
+                            <ul class="p-list">
+                                <li>
+                                    <div class="p-time">PRESENT</div>
+                                    <div class="p-details">
+                                        <strong>PERSONAL CHANNEL</strong>
+                                        <span>Content Creator</span>
+                                    </div>
+                                    <div class="p-text">Managing YouTube and TikTok channels by delivering high-quality
+                                        visual stories and optimizing digital engagement.</div>
+                                </li>
+                                <li>
+                                    <div class="p-time">04/2023 - 09/2023</div>
+                                    <div class="p-details">
+                                        <strong>KOMINFO GUNUNGKIDUL</strong>
+                                        <span>Network Technician & Graphic Designer</span>
+                                    </div>
+                                    <div class="p-text">Producing creative digital content and providing technical
+                                        network maintenance in Gunungkidul.</div>
+                                </li>
+                                <li>
+                                    <div class="p-time">08/2024 - 09/2024</div>
+                                    <div class="p-details">
+                                        <strong>BUAYA STORE</strong>
+                                        <span>Content Creator</span>
+                                    </div>
+                                    <div class="p-text">Creating and editing promotional videos to drive engagement for
+                                        a top-up store.</div>
+                                </li>
+                                <li>
+                                    <div class="p-time">PRESENT</div>
+                                    <div class="p-details">
+                                        <strong>S1 - SISTEM INFORMASI UNIVERSITAS AMIKOM YOGYAKARTA</strong>
+                                        <span>Content Creator</span>
+                                    </div>
+                                    <div class="p-text">Producing creative digital content and managing social media
+                                        engagement for the department.</div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Achievement -->
+                        <div class="p-block" data-aos="fade-up" data-aos-delay="200">
+                            <h3 class="p-title">ACHIEVEMENT</h3>
+                            <ul class="p-list achievement-list">
+                                <li>
+                                    <div class="p-time">12/2024</div>
+                                    <div class="p-details">
+                                        <strong>WINNER PIMAPOSMA 2024 | POSTER DESIGN</strong>
+                                        <span>Role: Poster Design</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="p-time">01/2025</div>
+                                    <div class="p-details">
+                                        <strong>NOMINEE GEMASI 2025 | BUSINESS PLAN</strong>
+                                        <span>Role: Team Leader</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="p-time">07/2025</div>
+                                    <div class="p-details">
+                                        <strong>NOMINEE AMICTA 2025 | BUSINESS PLAN & UI/UX</strong>
+                                        <span>Role: Team Leader</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="p-time">12/2025</div>
+                                    <div class="p-details">
+                                        <strong>WINNER PIMAPOSMA 2025 | PKM 5 BIDANG</strong>
+                                        <span>Role: Team Leader</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="p-time">02/2026</div>
+                                    <div class="p-details">
+                                        <strong>WINNER ARCADIA 2026 | MULTIMEDIA, BUSINESS PLAN, UI/UX</strong>
+                                        <span>Role: Team Leader, Editor, Director</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Column 2 -->
+                    <div class="p-col-right">
+                        <!-- Skills -->
+                        <div class="p-block" data-aos="fade-up" data-aos-delay="100">
+                            <h3 class="p-title">SKILLS</h3>
+                            <div class="skills-grid">
+                                <ul>
+                                    <li>GRAPHIC DESIGN</li>
+                                    <li>AI-ASSISTED DESIGN</li>
+                                    <li>BASIC MOTION GRAPHIC</li>
+                                    <li>VIDEO EDITING</li>
+                                </ul>
+                                <ul>
+                                    <li>TEAMWORK</li>
+                                    <li>TIME MANAGEMENT</li>
+                                    <li>ADAPTABILITY</li>
+                                    <li>ATTENTION TO DETAIL</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Educations -->
+                        <div class="p-block" data-aos="fade-up" data-aos-delay="200">
+                            <h3 class="p-title">EDUCATIONS</h3>
+                            <ul class="p-list edu-list">
+                                <li>
+                                    <div class="p-time">2022 - 2024</div>
+                                    <div class="p-details">
+                                        <strong>SMK N 1 NGLIPAR</strong>
+                                        <span>Computer and Network Engineering</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="p-time">PRESENT</div>
+                                    <div class="p-details">
+                                        <strong>UNIVERSITAS AMIKOM YOGYAKARTA</strong>
+                                        <span>Bachelor of Information Systems</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Contact -->
+                        <div class="p-block" data-aos="fade-up" data-aos-delay="300">
+                            <h3 class="p-title">CONTACT</h3>
+                            <ul class="contact-list">
+                                <li><i class='bx bxl-instagram'></i> hnrosyid_</li>
+                                <li><i class='bx bx-envelope'></i> hidayatnurrosyid1982@gmail.com</li>
+                                <li><i class='bx bxl-linkedin-square'></i> linkedin.com/in/hidayat-nur-rosyid/</li>
+                            </ul>
+                        </div>
+
+                        <!-- Software -->
+                        <div class="p-block" data-aos="fade-up" data-aos-delay="400">
+                            <h3 class="p-title">SOFTWARE</h3>
+                            <div class="software-icons">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Adobe_After_Effects_CC_icon.svg"
+                                    alt="After Effects">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg"
+                                    alt="Illustrator">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg"
+                                    alt="Photoshop">
+                                <!-- Placeholders for capcut, figma etc -->
+                                <div class="soft-icon capcut-icon"></div>
+                                <div class="soft-icon figma-icon"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dynamic Portfolio Section -->
+    <div class="container-pt">
+        <section id="portfolio" class="section dark-section">
+            <div class="section-header" data-aos="fade-up">
+                <h2>SELECTED WORKS</h2>
+            </div>
+
+            <div class="portfolio-grid" id="portfolio-container">
+                <!-- Data will be injected here via app.js -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Portfolio Modal -->
+    <div id="portfolioModal" class="portfolio-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <span class="modal-category" id="modalCategory">Category</span>
+                    <h2 id="modalTitle">Project Title</h2>
+                </div>
+                <button class="modal-close" id="modalClose"><i class='bx bx-x'></i></button>
+            </div>
+            <div class="modal-body">
+                <p id="modalVideoText" class="modal-video-text"></p>
+                <div id="modalVideoContainer" class="modal-video-grid"></div>
+                <div id="modalImageContainer"></div>
+                <p class="modal-desc" id="modalDesc">Description</p>
+                <a href="#" class="modal-link" id="modalLink" target="_blank">
+                    Lihat Detail <i class='bx bx-right-arrow-alt'></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="site-footer-new" id="contact">
+        <div class="footer-bg-wrapper">
+            <div class="bg-gradient"></div>
+            <div class="bg-halftone"></div>
+        </div>
+
+        <div class="footer-main-content">
+            <div class="large-text-row row-top">
+                <span class="serif-italic">LET'S</span>
+            </div>
+
+            <div class="large-text-row row-bottom">
+                <div class="connect-wrapper">
+                    <span class="serif-italic">CONNECT</span>
+                </div>
+
+                <div class="small-text-side">
+                    <h4>THANK YOU</h4>
+                    <svg class="squiggly-line" viewBox="0 0 100 10" preserveAspectRatio="none">
+                        <path d="M0,5 Q5,10 10,5 T20,5 T30,5 T40,5 T50,5 T60,5 T70,5 T80,5 T90,5 T100,5" fill="none"
+                            stroke="#60a5fa" stroke-width="1.5" stroke-linecap="round"></path>
+                    </svg>
+                    <div class="footer-new-socials">
+                        <a href="https://linkedin.com/in/hidayat-nur-rosyid/" title="LinkedIn" target="_blank"><i
+                                class='bx bxl-linkedin'></i></a>
+                        <a href="https://instagram.com/hnrosyid_" title="Instagram" target="_blank"><i
+                                class='bx bxl-instagram'></i></a>
+                        <a href="mailto:hidayatnurrosyid1982@gmail.com" title="Email"><i class='bx bx-envelope'></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom-bar">
+            <p>&copy; 2026 Hidayat Nur Rosyid. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
