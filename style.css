@@ -852,14 +852,27 @@ body {
     align-items: center;
 }
 
-/* On mobile, force left alignment */
+/* On mobile: date + title in the same row */
 @media (max-width: 767px) {
     .achievement-list li {
         align-items: flex-start;
     }
 
+    .p-list li {
+        flex-direction: column;
+        padding: 0.75rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .p-list li:first-child {
+        padding-top: 0;
+    }
+
+    /* Date moves inline above title */
     .p-time {
         text-align: left;
+        font-size: 0.75rem;
+        margin-bottom: 0.15rem;
     }
 }
 
