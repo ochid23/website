@@ -131,6 +131,18 @@ const portfolios = [
             "https://i.imgur.com/z07jTZi.png"
         ],
         link: "#",
-        icon: "bx-camera"
     },
+    {
+        id: 10,
+        title: "Tugas Iklan Komersial (Nescafe)",
+        category: "Video Editor",
+        description: "A commercial advertisement project for Nescafe, showcasing creative video editing and engaging visual storytelling.",
+        image: "https://i.imgur.com/vH0Hj3d.jpg", // Using a placeholder since imgur blob link is local, will ask user to re-upload or provide direct image link if they want
+        videoOrientation: "landscape",
+        videos: [
+            { url: "https://www.youtube.com/embed/BM14JvfUEOk", orientation: "landscape" }
+        ],
+        link: "#",
+        icon: "bx-video"
+    }
 ];
