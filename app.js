@@ -145,6 +145,19 @@ document.addEventListener('DOMContentLoaded', () => {
     AOS.init({ once: true, offset: 80, duration: 1000, easing: 'ease-out-cubic' });
 
     // =============================================
+    // CLICK TO TOGGLE DETAILS (for mobile / touch)
+    // =============================================
+    document.querySelectorAll('.p-list li').forEach(item => {
+        item.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+            // Close all open items
+            document.querySelectorAll('.p-list li').forEach(i => i.classList.remove('active'));
+            // Toggle the clicked one
+            if (!isActive) item.classList.add('active');
+        });
+    });
+
+    // =============================================
     // ID CARD PHYSICS
     // - SVG rope drawn from top anchor → card center
     // - Card translates + rotates based on drag

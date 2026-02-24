@@ -753,6 +753,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
+    cursor: pointer;
 }
 
 .p-time {
@@ -760,6 +761,11 @@ body {
     font-size: 0.85rem;
     font-weight: 500;
     margin-bottom: 0.2rem;
+    transition: color 0.3s ease;
+}
+
+.p-list li:hover .p-time {
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .p-details {
@@ -772,17 +778,41 @@ body {
     font-size: 0.95rem;
     margin-bottom: 0.1rem;
     text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.p-list li:hover .p-details strong {
+    color: #ffffff;
 }
 
 .p-details span {
     color: rgba(255, 255, 255, 0.6);
     font-size: 0.85rem;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    margin-top: 0;
+    transition: all 0.4s ease;
 }
 
 .p-text {
     color: rgba(255, 255, 255, 0.65);
     font-size: 0.85rem;
     line-height: 1.5;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    margin-top: 0;
+    transition: all 0.4s ease;
+}
+
+.p-list li:hover .p-details span,
+.p-list li:hover .p-text,
+.p-list li.active .p-details span,
+.p-list li.active .p-text {
+    max-height: 200px;
+    opacity: 1;
+    margin-top: 0.3rem;
 }
 
 /* Grid layout for lists in desktop */
