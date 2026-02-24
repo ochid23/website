@@ -137,10 +137,23 @@ const portfolios = [
         title: "Tugas Iklan Komersial (Nescafe)",
         category: "Video Editor",
         description: "A commercial advertisement project for Nescafe, showcasing creative video editing and engaging visual storytelling.",
-        image: "https://i.imgur.com/vH0Hj3d.jpg", // Using a placeholder since imgur blob link is local, will ask user to re-upload or provide direct image link if they want
+        image: "https://i.imgur.com/XUwXNap.jpeg", // Using a placeholder since imgur blob link is local, will ask user to re-upload or provide direct image link if they want
         videoOrientation: "landscape",
         videos: [
             { url: "https://www.youtube.com/embed/BM14JvfUEOk", orientation: "landscape" }
+        ],
+        link: "#",
+        icon: "bx-video"
+    },
+    {
+        id: 11,
+        title: "Tugas Video Clip (Hindia - Kita Kesana)",
+        category: "Video Editor",
+        description: "A music video clip project for Hindia's 'Kita Kesana', featuring creative visual transitions and storytelling through editing.",
+        image: "https://i.imgur.com/baabfQ3.jpeg",
+        videoOrientation: "landscape",
+        videos: [
+            { url: "https://www.youtube.com/embed/QeJcBvErXP8", orientation: "landscape" }
         ],
         link: "#",
         icon: "bx-video"
