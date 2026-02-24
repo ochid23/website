@@ -767,6 +767,7 @@ body {
 .p-details {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .p-details-header {
@@ -774,6 +775,7 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 0.5rem;
+    width: 100%;
 }
 
 .p-chevron {
