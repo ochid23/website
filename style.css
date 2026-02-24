@@ -773,6 +773,26 @@ body {
     flex-direction: column;
 }
 
+.p-details-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.p-chevron {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.4);
+    transition: transform 0.4s ease, color 0.3s ease;
+    flex-shrink: 0;
+}
+
+.p-list li:hover .p-chevron,
+.p-list li.active .p-chevron {
+    transform: rotate(180deg);
+    color: rgba(255, 255, 255, 0.9);
+}
+
 .p-details strong {
     color: rgba(255, 255, 255, 0.95);
     font-size: 0.95rem;
