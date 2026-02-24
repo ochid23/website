@@ -59,15 +59,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Support videos if item.videos is an array
             if (Array.isArray(item.videos) && item.videos.length > 0) {
-                videoContainer.innerHTML = item.videos.map(vid => {
-                    // Cek apkah link video adalah youtube
-                    if (vid.includes('youtube.com') || vid.includes('youtu.be')) {
-                        // Memastikan link berupa /embed/ (walaupun di data.js sudah kita set)
-                        const embedUrl = vid.replace('youtu.be/', 'www.youtube.com/embed/').replace('watch?v=', 'embed/');
-                        return `<iframe src="${embedUrl}?rel=0" class="modal-video" style="border:none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+                videoContainer.innerHTML = item.videos.map(vidItem => {
+                    let vidUrl = '';
+                    let isLandscape = false;
+
+                    // Support both string URL and object {url: '', orientation: ''}
+                    if (typeof vidItem === 'object' && vidItem !== null) {
+                        vidUrl = vidItem.url;
+                        isLandscape = (vidItem.orientation === 'landscape');
+                    } else {
+                        vidUrl = vidItem;
                     }
-                    return `<video src="${vid}" class="modal-video" controls playsinline></video>`;
+
+                    // Cek apkah link video adalah youtube
+                    if (vidUrl.includes('youtube.com') || vidUrl.includes('youtu.be')) {
+                        // Memastikan link berupa /embed/ (walaupun di data.js sudah kita set)
+                        const embedUrl = vidUrl.replace('youtu.be/', 'www.youtube.com/embed/').replace('watch?v=', 'embed/');
+                        return `<iframe src="${embedUrl}?rel=0" class="modal-video ${isLandscape ? 'landscape' : ''}" style="border:none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+                    }
+                    return `<video src="${vidUrl}" class="modal-video ${isLandscape ? 'landscape' : ''}" controls playsinline></video>`;
                 }).join('');
+
                 videoContainer.style.display = 'grid';
                 if (item.videoOrientation === 'landscape') {
                     videoContainer.classList.add('landscape');
