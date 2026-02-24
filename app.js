@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 ? `<img src="${item.image}" alt="${item.title}" loading="lazy">`
                 : `<i class='bx ${item.icon}'></i>`;
             const cardHTML = `
-                <article class="card" data-aos="fade-up" data-aos-delay="${(index % 3) * 150}" onclick="openPortfolioModal(${index})" style="cursor:pointer">
+                <article class="card" data-category="${item.category}" data-aos="fade-up" data-aos-delay="${(index % 3) * 150}" onclick="openPortfolioModal(${index})" style="cursor:pointer">
                     <div class="card-image-wrap">${imageContent}</div>
                     <div class="card-category">${item.category}</div>
                     <h3 class="card-title">${item.title}</h3>
@@ -143,6 +143,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // AOS Init
     AOS.init({ once: true, offset: 80, duration: 1000, easing: 'ease-out-cubic' });
+
+    // =============================================
+    // PORTFOLIO FILTER
+    // =============================================
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Update active state
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filter = btn.dataset.filter;
+            const cards = document.querySelectorAll('#portfolio-container .card');
+            cards.forEach(card => {
+                if (filter === 'all' || card.dataset.category === filter) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        });
+    });
 
     // =============================================
     // CLICK TO TOGGLE DETAILS (for mobile / touch)

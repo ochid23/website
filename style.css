@@ -434,9 +434,49 @@ body {
 .section-header h2 {
     font-family: var(--font-heading);
     font-size: 2.5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     letter-spacing: 1px;
     font-weight: 700;
+}
+
+/* Portfolio Filter Pills */
+.portfolio-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 2.5rem;
+}
+
+.filter-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.65);
+    padding: 0.45rem 1.1rem;
+    border-radius: 50px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    font-family: var(--font-main);
+    cursor: pointer;
+    transition: all 0.25s ease;
+    letter-spacing: 0.4px;
+}
+
+.filter-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.filter-btn.active {
+    background: white;
+    color: #02000f;
+    border-color: white;
+    font-weight: 700;
+}
+
+/* Card hide animation when filtered */
+.card.hidden {
+    display: none;
 }
 
 .portfolio-grid {
