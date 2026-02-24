@@ -76,7 +76,8 @@ const portfolios = [
         videos: [
             "https://www.youtube.com/embed/gG0PzBa58dU",
             "https://www.youtube.com/embed/3jRpIkAjzgg",
-            "https://www.youtube.com/embed/UKW6gMEu-68"
+            "https://www.youtube.com/embed/UKW6gMEu-68",
+            "https://www.youtube.com/embed/lE1q5viXcKI"
         ],
         link: "#",
         icon: "bx-camera"
