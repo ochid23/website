@@ -74,9 +74,9 @@ const portfolios = [
         ],
         videoIntro: "Here are some Instagram and TikTok reels content that I produced during my time as a Content Creator:",
         videos: [
-            "videos/amikom-vid-1.mp4",
-            "videos/amikom-vid-2.mp4",
-            "videos/amikom-vid-3.mp4"
+            "https://www.youtube.com/embed/gG0PzBa58dU",
+            "https://www.youtube.com/embed/3jRpIkAjzgg",
+            "https://www.youtube.com/embed/UKW6gMEu-68"
         ],
         link: "#",
         icon: "bx-camera"
